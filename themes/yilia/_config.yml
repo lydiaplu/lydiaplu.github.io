@@ -1,24 +1,24 @@
 # Header
 
 menu:
-  主页: /
-  随笔: /tags/随笔/
+  Home: /
+  Tags: /tags/
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
-  zhihu: "#"
+  github: "https://github.com/lydiaplu"
+  linkedin: "https://www.linkedin.com/in/pan-lydia-lu/"
+  medium: "https://medium.com/@lydiaplu"
+  # rss: "#"
+  # zhihu: "#"
   #qq: "#"
   #weixin: "#"
-  #jianshu: "#"
+  # jianshu: "https://medium.com/@lydiaplu"
   #douban: "#"
   #mail: "mailto:litten225@qq.com"
   #facebook: "#"
   #google: "#"
   #twitter: "#"
-  #linkedin: "#"
 
 rss: /atom.xml
 
@@ -32,7 +32,7 @@ root:
 # 文章太长，截断按钮文字
 excerpt_link: more
 # 文章卡片右下角常驻链接，不需要请设置为false
-show_all_link: '展开全文'
+show_all_link: 'read more'
 # 数学公式
 mathjax: false
 # 是否在新窗口打开链接
@@ -42,7 +42,7 @@ open_in_new: false
 # 请在需要打赏的文章的md文件头部，设置属性reward: true
 
 # 打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
-reward_type: 2
+reward_type: 0
 # 打赏wording
 reward_wording: '谢谢你请我吃糖果'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
@@ -75,7 +75,7 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: false
+  showTags: true
 
 # 智能菜单
 # 如不需要，将该对应项置为false
@@ -83,9 +83,10 @@ slider:
 #smart_menu:
 #  friends: false
 smart_menu:
-  innerArchive: '所有文章'
-  friends: '友链'
-  aboutme: '关于我'
+  innerArchive: 'All Articles'
+  # friends: 'friends'
+  aboutme: 'About Me'
+
 
 friends:
   友情链接1: http://localhost:4000/
@@ -95,4 +96,5 @@ friends:
   友情链接5: http://localhost:4000/
   友情链接6: http://localhost:4000/
 
-aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
+
+aboutme: Thank you for visiting my blog. You can leave your footprint here.
