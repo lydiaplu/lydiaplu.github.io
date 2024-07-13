@@ -3,7 +3,7 @@ name: Deploy Hexo site to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-deploy:
@@ -12,11 +12,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: Install Hexo
         run: npm install hexo-cli -g
@@ -25,12 +27,12 @@ jobs:
         run: npm install
 
       - name: Install theme dependencies
-        run: cd themes/pure && npm install && cd ../..
+        run: cd themes/landscape && npm install && cd ../..
 
       - name: Generate static files
         run: hexo generate
 
       - name: Deploy to GitHub Pages
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: hexo deploy
